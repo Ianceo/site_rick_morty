@@ -38,6 +38,8 @@ const categories = [
   { key: "principal", label: "Protagonistas" },
   { key: "familia", label: "Família" },
   { key: "aliado", label: "Aliados" },
+  { key: "alienigena", label: "Alienígena" },
+  { key: "inimigo", label: "Inimigos" },
 ];
 
 function renderFilters(onChange) {

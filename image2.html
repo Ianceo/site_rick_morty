@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Rick and Morty</title>
+    <style>
+        body {
+            background: #1e1e1e;
+            text-align: center;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        #galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Todos os 826 Personagens</h1>
+
+    <div id="galeria"></div>
+
+    <script>
+        const galeria = document.getElementById('galeria');
+
+        for (let id = 1; id <= 826; id++) {
+
+            const img = document.createElement('img');
+
+            img.src = `https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`;
+
+            img.loading = 'lazy';
+
+            img.title = `Personagem #${id}`;
+
+            galeria.appendChild(img);
+        }
+    </script>
+
+</body>
+</html>
